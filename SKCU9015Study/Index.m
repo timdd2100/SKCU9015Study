@@ -8,7 +8,7 @@
 
 #import "Index.h"
 #import "dispatchViewController.h"
-
+#import "labelAndtextView.h"
 @interface Index ()
 
 @property NSArray *indexTitle;
@@ -78,7 +78,8 @@
     
     dispatchViewController *dispatch = [self.storyboard instantiateViewControllerWithIdentifier:@"dispatchViewController"];
                                     
-    
+    labelAndtextView *labelandtextview = [self.storyboard instantiateViewControllerWithIdentifier:@"labelAndtextView"];
+
     
     switch (indexPath.row) {
         case 0:
@@ -89,11 +90,11 @@
              [self.navigationController pushViewController:scrollview animated:YES];
             break;
         case 2:
-            
+             [self.navigationController pushViewController:labelandtextview animated:YES];
             break;
             
         case 3:
-            
+             [self.navigationController pushViewController:labelandtextview animated:YES];
             break;
        
     }
